@@ -14,7 +14,7 @@ def start():
               'show - show note\n',
               'edit - edit note\n',
               'save - save note\n',
-              'del  - delete note\n',
+              'delete  - delete note\n',
               'exit - exit\n')
 
         choice = view.input_choice()
@@ -44,7 +44,7 @@ def start():
                 note = view.input_notes(my_notes.get_id())
                 result = my_notes.change_notes(note, index)
                 view.print_message('Note ' + result + ' successfully changed!')
-            case "del":
+            case "delete":
                 notes = my_notes.get_notes()
                 index = view.input_index('Enter # of note to delete: ', notes)
                 title = my_notes.delete_note(index)

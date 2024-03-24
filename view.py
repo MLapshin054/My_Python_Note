@@ -14,10 +14,10 @@ def input_choice():
 
 def print_notes(notes: list[dict[str, str]]):
     if notes:
-        print('-' * 100)
+        print('-' * 130)
         for id, data in enumerate(notes, 1):
             print(f'{id:<3} | {data["title"]:<30} | {data["note"]:<60} | {data["date"]:<20}')
-        print('-'*100)
+        print('-' * 130)
     else:
         print_message('Something went wrong or notes is empty!')
 
