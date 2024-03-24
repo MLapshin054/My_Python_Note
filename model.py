@@ -29,7 +29,7 @@ class Notes:
         self.notes.append(note)
         return note.get('title')
 
-    def get_notes(self) -> list(dict[str, str]):
+    def get_notes(self) -> list[dict[str, str]]:
         return self.notes
 
     def delete_note(self, index: int):
