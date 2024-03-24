@@ -38,8 +38,8 @@ class Notes:
     def search_notes(self, word: str) -> list[dict[str, str]]:
         result: list[dict[str, str]] = []
         for note in self.notes:
-            for filed in note.values():
-                if word.lower().strip() in filed.lower().strip():
+            for field in note.values():
+                if word.lower().strip() in field.lower().strip():
                     result.append(note)
                     break
         return result
