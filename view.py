@@ -16,8 +16,7 @@ def print_notes(notes: list[dict[str, str]]):
     if notes:
         print('-' * 100)
         for id, data in enumerate(notes, 1):
-            print(
-                f'{id:<3} | {data["title"]:<30} | {data["note"]:<60} | {data["date"]:<20}')
+            print(f'{id:<3} | {data["title"]:<30} | {data["note"]:<60} | {data["date"]:<20}')
         print('-'*100)
     else:
         print_message('Something went wrong or notes is empty!')
@@ -35,6 +34,7 @@ def input_notes(new_id: int):
     temp_note['id'] = str(new_id)
     temp_note['date'] = datetime.now().strftime('%d-%m-%Y %H:%M:%S')
     temp_note['title'] = input('Enter title: ')
+    temp_note['note'] = input('Enter notes: ')
     return temp_note
 
 
